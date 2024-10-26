@@ -1,9 +1,10 @@
 import 'package:flutter/widgets.dart';
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
+class SignupController extends GetxController {
   final cEmail = TextEditingController();
   final cPass = TextEditingController();
+
 
   @override
   void onClose() {

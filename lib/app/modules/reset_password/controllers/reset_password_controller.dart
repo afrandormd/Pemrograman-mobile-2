@@ -1,14 +1,13 @@
-import 'package:flutter/widgets.dart';
+import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
-class LoginController extends GetxController {
+class ResetPasswordController extends GetxController {
   final cEmail = TextEditingController();
-  final cPass = TextEditingController();
 
   @override
   void onClose() {
     cEmail.dispose();
-    cPass.dispose();
     super.dispose();
   }
+
 }

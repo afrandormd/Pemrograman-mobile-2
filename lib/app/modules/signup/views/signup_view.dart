@@ -4,9 +4,9 @@ import 'package:get/get.dart';
 import 'package:myapp/app/controllers/auth_controller.dart';
 import 'package:myapp/app/routes/app_pages.dart';
 
-import '../controllers/login_controller.dart';
+import '../controllers/signup_controller.dart';
 
-class LoginView extends GetView<LoginController> {
+class SignupView extends GetView<SignupController> {
   final cAuth = Get.find<AuthController>();
   @override
   Widget build(BuildContext context) {
@@ -19,7 +19,7 @@ class LoginView extends GetView<LoginController> {
               height: 80,
             ),
             Image.network(
-              "https://static-00.iconduck.com/assets.00/android-plain-wordmark-icon-256x256-ppoejbtc.png",
+              "https://cdn0.iconfinder.com/data/icons/user-interface-vol-5-4/66/6-512.png",
               height: 100,
             ),
             SizedBox(
@@ -43,9 +43,9 @@ class LoginView extends GetView<LoginController> {
             ),
             ElevatedButton(
               onPressed: () {
-                cAuth.login(controller.cEmail.text, controller.cPass.text);
+                cAuth.signup(controller.cEmail.text, controller.cPass.text);
               },
-              child: Text("Login"),
+              child: Text("Sign Up"),
               style: ElevatedButton.styleFrom(
                 backgroundColor: Color.fromARGB(255, 105, 150, 34),
                 foregroundColor: Colors.white,
@@ -54,27 +54,15 @@ class LoginView extends GetView<LoginController> {
             SizedBox(
               height: 10,
             ),
-            Align(
-              alignment: Alignment.centerRight,
-              child: TextButton(
-                child: Text("Reset Password"),
-                onPressed: () {
-                  Get.offAllNamed(Routes.RESET_PASSWORD);
-                },
-              ),
-            ),
-            SizedBox(
-              height: 10,
-            ),
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                Text("Belum Punya Akun ?"),
+                Text("Sudah Punya Akun ?"),
                 TextButton(
                   onPressed: () {
-                    Get.toNamed(Routes.SIGNUP);
+                    Get.toNamed(Routes.LOGIN);
                   },
-                  child: Text("Daftar Disini"),
+                  child: Text("Masuk Disini"),
                 ),
               ],
             ),

@@ -51,7 +51,7 @@ class DefaultFirebaseOptions {
 
   static const FirebaseOptions android = FirebaseOptions(
     apiKey: 'AIzaSyDV-N_cv1_7JbqBXa9nmgjd9AT2vr26EjQ',
-    appId: '1:263442878064:android:ddc9f4ff5f0690925faeb5',
+    appId: '1:263442878064:android:65617d3a70b8cbf25faeb5',
     messagingSenderId: '263442878064',
     projectId: 'latihan-if22b-master',
     storageBucket: 'latihan-if22b-master.appspot.com',
