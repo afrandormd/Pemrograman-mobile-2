@@ -8,28 +8,42 @@ class HomeView extends GetView<HomeController> {
 
   @override
   Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: const Text('HomeView'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: Column(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            ElevatedButton(
-              onPressed: () {
-                 cAuth.logout();
-              },
-              child: Text("Log Out"),
-              style: ElevatedButton.styleFrom(
-                backgroundColor: Color.fromARGB(255, 180, 23, 49),
-                foregroundColor: Colors.white,
-              ),
-            ),
-          ],
-        ),
-      ),
-    );
+    return DashboardAdmin();
+  }
+}
+
+// Dashboard Admin
+class DashboardAdmin extends StatefulWidget {
+  const DashboardAdmin({super.key});
+
+  @override
+  State<DashboardAdmin> createState() => _DashboardAdminState();
+}
+
+class _DashboardAdminState extends State<DashboardAdmin> {
+  final cAuth = Get.find<AuthController>();
+  int _index = 0;
+  List<Map> _fragment = [
+    {
+      'title': "Dashboard",
+      'view': 'Dashboard'
+    },
+    {
+      'title': "Data Mahasiswa",
+      'view': 'Mahasiswa'
+    },
+    {
+      'title': "Data Dosen",
+      'view': 'Dosen'
+    },
+    {
+      'title': "Data Pegawai",
+      'view': 'Pegawai'
+    },
+  ];
+
+  @override
+  Widget build(BuildContext context) {
+    return const Placeholder();
   }
 }
